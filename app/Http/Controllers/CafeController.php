@@ -7,8 +7,23 @@ use App\Models\Cafe;
 
 class CafeController extends Controller
 {
+    //cafeを表示する
     public function index(Cafe $cafe)//インポートしたCafeをインスタンス化して$cafeとして使用。
     {
-        return $cafe->get();//$cafeの中身を戻り値にする。
+        return view('cafes.index')->with(['cafes' => $cafe->get()]);  
+       //blade内で使う変数'cafes'と設定。'cafes'の中身にgetを使い、インスタンス化した$cafeを代入。
     }
+    //初めの画面を表示する
+    public function show(){
+        return view('index');
+    }
+    //log in
+    public function login(){
+        return view('auth.login');
+    }
+    //register
+    public function register(){
+        return view('auth.register');
+    }
+    
 }
