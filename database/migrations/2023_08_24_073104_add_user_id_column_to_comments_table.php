@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('cafes', function (Blueprint $table) {
-            $table->dropForeign('cafes_user_id_foreign');
-            $table->dropColumn('user_id');
+        Schema::table('comments', function (Blueprint $table) {
+            $table->foreignId('user_id')->constrained();   
+            //'user_id' は 'usersテーブル' の 'id' を参照する外部キーで
         });
     }
 
@@ -26,7 +26,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('table', function (Blueprint $table) {
+        Schema::table('comments', function (Blueprint $table) {
             //
         });
     }

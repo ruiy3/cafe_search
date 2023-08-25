@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('reviews', function (Blueprint $table) {
-            //$table->foreignId('category_id')->constrained();   
+            $table->foreignId('category_id')->constrained();   
             //'category_id' は 'categoryテーブル' の 'id' を参照する外部キーで
         });
     }
