@@ -33,5 +33,32 @@ class CafeSeeder extends Seeder
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),
          ]);
+         
+         DB::table('cafes')->insert([
+                'cafe_name' => 'JAZZ茶房　青猫',
+                'cafe_location' => '藤が丘駅近く',
+                'cafe_explain' => 'ジャズが流れており、雰囲気が良く音楽の世界にい浸ることができる！',
+                'cafe_evaluation' => 4,
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+         
+         DB::table('cafes')->insert([
+                'cafe_name' => 'DAWARY（ダワリー）',
+                'cafe_location' => '愛知県名古屋市緑区有松',
+                'cafe_explain' => 'デザイナーズカフェで雰囲気おしゃれ！ペットの同伴可能！',
+                'cafe_evaluation' => 3,
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
+         
+         DB::table('cafes')->insert([
+                'cafe_name' => 'ori',
+                'cafe_location' => '愛知県名古屋市西区大野木4-8',
+                'cafe_explain' => '多国籍料理を楽しむことができる！健康的でヘルシーなため女性人気高い！',
+                'cafe_evaluation' => 4,
+                'created_at' => new DateTime(),
+                'updated_at' => new DateTime(),
+         ]);
     }
 }

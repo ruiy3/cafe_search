@@ -17,10 +17,6 @@ use App\Http\Controllers\CafeController;
 
 Route::get('/', [CafeController::class, 'show']);
 
-Route::get('/login', [CafeController::class, 'login']);
-
-Route::get('/register', [CafeController::class, 'register']);
-
 Route::get('/cafes', [CafeController::class, 'index'])->name('index'); 
 
 Route::get('/dashboard', function () {

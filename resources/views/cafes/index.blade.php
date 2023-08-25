@@ -9,6 +9,24 @@
             text-align: center;
             padding: 20px 0;
         }
+        .home {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .home-button {
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #dcdcdc;
+            color: Black;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .paginate {
+            display: flex;
+            justify-content: center;
+        }
+   
     </style>
     <div class='cafes'>
         @foreach ($cafes as $cafe)
@@ -19,5 +37,10 @@
             </div>
         @endforeach
     </div>
-    
+    <div class='home'>
+        <a type=button href="{{ route('index') }}" class="home-button">Home</a>
+    </div>
+    <div class='paginate'>
+        {{ $cafes->links('pagination::default')}}
+    </div>
 </x-app-layout>
