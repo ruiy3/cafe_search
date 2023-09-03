@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CafeController;
+use App\Http\Controllers\ReviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,15 @@ use App\Http\Controllers\CafeController;
 Route::get('/', [CafeController::class, 'show']);
 
 Route::get('/cafes', [CafeController::class, 'index'])->name('index'); 
+
+//Route::post('/cafes/create', [ReviewController::class, 'store']);
+
+Route::post('/cafes/{cafe}/review', [ReviewController::class, 'store'])->name('review.store');
+
+//Route::get('/cafes/review', [CafeController::class, 'create'])->name('review');
+Route::get('/cafes/{cafe}/review', [ReviewController::class, 'create'])->name('review');
+
+Route::get('/cafes/{cafe}', [CafeController::class ,'cafe']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

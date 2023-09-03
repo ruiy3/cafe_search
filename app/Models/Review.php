@@ -9,6 +9,13 @@ class Review extends Model
 {
     use HasFactory;
     
+    protected $fillable = [
+        'review',
+        'user_id',
+        'cafe_id',
+        'category_id',
+    ];
+    
     //「1対多」の関係なので単数系に
     public function user()
     {

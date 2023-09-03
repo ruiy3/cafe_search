@@ -9,6 +9,7 @@ class Cafe extends Model
 {
     use HasFactory;
     
+    
     public function getPaginateByLimit(int $limit_count = 4)
     {
         // updated_atで降順に並べたあと、limitで件数制限をかける
