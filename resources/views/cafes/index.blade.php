@@ -31,9 +31,10 @@
     <div class='cafes'>
         @foreach ($cafes as $cafe)
             <div class='cafe'>
-                <h2 class='cafe_name'>{{ __('＜cafe名＞') }}{{$cafe->cafe_name }}</h2>
-                <p class='cafe_location'>{{ __('＜場所＞') }}{{ $cafe->cafe_location }}</p>
+                <a href='/cafes/{{ $cafe->id }}'><h2 class='cafe_name'>{{ __('＜cafe名＞') }}{{ $cafe->cafe_name }}</h2></a>
+                {{--<p class='cafe_location'>{{ __('＜場所＞') }}{{ $cafe->cafe_location }}</p>
                 <p class='cafe_explain'>{{ __('＜ここがいい！＞') }}{{ $cafe->cafe_explain }}</p>
+                <a href='/cafes/review'><p class='cafe_'>{{ __('(レビューする)') }}</p></a>--}}
             </div>
         @endforeach
     </div>

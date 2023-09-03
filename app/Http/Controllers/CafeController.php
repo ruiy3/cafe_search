@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Cafe;
+use App\Models\Review;
 
 class CafeController extends Controller
 {
@@ -16,5 +17,16 @@ class CafeController extends Controller
     //初めの画面を表示する
     public function show(){
         return view('index');
+    }
+    
+    public function cafe(Cafe $cafe)
+    {
+        return view('cafes.cafe')->with(['cafe' => $cafe]);
+     //'post'はbladeファイルで使う変数。中身は$postはid=1のPostインスタンス。
+    }
+    //reviewの投稿ページへ
+    public function create(Cafe $cafe)
+    {
+        return view('cafes.review')->with(['cafe' => $cafe]);
     }
 }
