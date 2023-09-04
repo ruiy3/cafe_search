@@ -12,11 +12,6 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    
-                    {{--<x-nav-link :href="route('review')" :active="request()->routeIs('review')">
-                        {{ __('Review') }}
-                    </x-nav-link>--}}
-                    
                     <x-nav-link :href="route('index')" :active="request()->routeIs('index')">
                         {{ __('Cafe') }}
                     </x-nav-link>

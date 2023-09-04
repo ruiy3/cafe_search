@@ -21,7 +21,11 @@
             text-align: center;
             padding: 20px 0;
         }
-        .review {
+        .reviews {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .atomosphere {
             text-align: center;
             padding: 20px 0;
         }
@@ -39,6 +43,11 @@
         .button:hover {
             background-color: #555;
         }
+        .paginate {
+            display: flex;
+            justify-content: center;
+        }
+   
     </style>
     <div class='cafes'>
         <div class='cafe'>
@@ -46,12 +55,21 @@
             <h2 class='cafe_explain'>{{ __('＜ここがいい！＞') }}{{ $cafe->cafe_explain }}</h2>
         </div>
         <a href="{{ route('review', [ 'cafe' => $cafe->id ]) }}" class="button">{{ __('レビュー') }}</a>
+        <div class='atomosphere'>
+            <br><a href="{{ route('cafes.category', [ 'cafe' => $cafe->id ]) }}"><<雰囲気の詳細>></a>
+        </div>
     </div>
-    <div class="review">
-        <h1>{{ __('<review>') }}</h1>
-        @foreach ($cafe->reviews as $review)
-            <p class='cafe_'>{{ $review->user->name }}{{ __('>>')}}{{ $review->review }}</p>
+    <div class="reviews">
+        <h1>{{ __('<<レビュー>>') }}</h1>
+        @foreach ($reviews as $review)
+            <p class='review'>{{ $review->user->name }}{{ __('>>')}}{{ $review->review }}</p>
+            <p class='category'>{{ __('雰囲気：')}}{{ $review->category->kind }}</p><br>
         @endforeach
+    
+        <!-- ページネーションリンクを表示 -->
+        <div class='paginate'>
+        {{ $reviews->links('pagination::default')}}
+    </div>
     </div>
     <div class="footer">
         <a href="/cafes" class="button">戻る</a>
