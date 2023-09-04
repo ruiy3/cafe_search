@@ -24,8 +24,9 @@ Route::get('/cafes', [CafeController::class, 'index'])->name('index');
 
 Route::post('/cafes/{cafe}/review', [ReviewController::class, 'store'])->name('review.store');
 
-//Route::get('/cafes/review', [CafeController::class, 'create'])->name('review');
 Route::get('/cafes/{cafe}/review', [ReviewController::class, 'create'])->name('review');
+
+Route::get('/cafes/category/{cafe}', [ReviewController::class, 'category'])->name('cafes.category');
 
 Route::get('/cafes/{cafe}', [CafeController::class ,'cafe']);
 

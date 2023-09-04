@@ -13,6 +13,10 @@
             text-align: center;
             padding: 50px 0;
         }
+        .category {
+            text-align: center;
+            padding: 40px 0;
+        }
         .button {
             display: inline-block;
             padding: 10px 20px;
@@ -33,10 +37,20 @@
             @csrf
             <input type="hidden" name="review[user_id]" value="{{ Auth::user()->id }}">
             <input type="hidden" name="review[cafe_id]" value="{{ $cafe->id }}">
-            <input type="hidden" name="review[category_id]" value="{{ '1' }}">
             <div class="review">
-                <h2>review</h2>
+                <h2>-レビュー-</h2>
                 <textarea name="review[review]" placeholder="コメント"></textarea>
+            </div>
+            
+            <div class="category">
+                <h2>-雰囲気-</h2>
+                <select name="review[category_id]">
+                    @foreach($categories as $category)
+                        <option value="{{ $category->id }}">{{ $category->kind }}</option>
+                    @endforeach
+                </select>
+                <br>
+                <a href="{{ route('cafes.category', [ 'cafe' => $cafe->id ]) }}"><<雰囲気の詳細>></a>
             </div>
             <input type="submit" class="button" value="投稿"/>
         </form>

@@ -17,11 +17,43 @@ class CategorySeeder extends Seeder
     public function run()
     {
         DB::table('categories')->insert([
-                'kind' => 'おしゃれ',
-         ]);
+            'kind' => 'Cozy',
+        ]);
          
-         DB::table('categories')->insert([
-                'kind' => '落ち着く',
-         ]);
+        DB::table('categories')->insert([
+            'kind' => 'Modern',
+        ]);
+        
+        DB::table('categories')->insert([
+            'kind' => 'Retro',
+        ]);
+        
+        DB::table('categories')->insert([
+            'kind' => 'Artistic',
+        ]);
+        
+        DB::table('categories')->insert([
+            'kind' => 'Natural',
+        ]);
+        
+        DB::table('categories')->insert([
+            'kind' => 'Bohemian',
+        ]);
+        
+        DB::table('categories')->insert([
+            'kind' => 'Industrial',
+        ]);
+        
+        DB::table('categories')->insert([
+            'kind' => 'Romantic',
+        ]);
+        
+        DB::table('categories')->insert([
+            'kind' => 'Family-Friendly',
+        ]);
+        
+        DB::table('categories')->insert([
+            'kind' => 'Cool',
+        ]);
     }
 }
