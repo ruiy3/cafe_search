@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Cafe;
 use App\Models\Review;
+use App\Models\Comment;
 
 class CafeController extends Controller
 {
@@ -24,6 +25,9 @@ class CafeController extends Controller
         // カフェのレビューをページネーション
         $reviews = $cafe->reviews()->paginate(10);// 1ページあたり10件ずつ表示
     
-        return view('cafes.cafe', compact('cafe', 'reviews'));
+        // カフェに関連付けられたコメントを取得
+        $comments = Comment::whereIn('review_id', $reviews->pluck('id'))->get();
+    
+        return view('cafes.cafe', compact('cafe', 'reviews', 'comments'));
     }
 }

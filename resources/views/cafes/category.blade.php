@@ -51,7 +51,7 @@
             クール（Cool）: モダンでトレンディな雰囲気を持つカフェ。若い世代やクリエイティブな人々に人気です。<br>
         </h1>
         <div class="footer">
-            <a href="/cafes/{{ $cafe->id }}/review" class="button">戻る</a>
+            <a href="{{ route('cafes.cafe', [ 'cafe' => $cafe->id ]) }}" class="button">戻る</a>
         </div>
     </div>
 </x-app-layout>

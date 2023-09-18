@@ -21,14 +21,27 @@ class ReviewController extends Controller
         $input['user_id'] = auth()->user()->id;
         $input['cafe_id'] = $cafe->id; 
         
-        //$review = new Review(); // 新しい Review インスタンスを作成
-        $review->fill($input)->save();
+        // コメントが空でない場合のみ保存
+        if (!empty($input['review'])) {
+            $review->fill($input)->save();
+        }
         
         return redirect('/cafes/' . $input['cafe_id']);
     }
     //categoryの詳細ページへ
-    public function category(Cafe $cafe)
+    public function show(Cafe $cafe)
     {
         return view('cafes.category')->with(['cafe' => $cafe]);
+    }
+    //commentの詳細ページへ
+    public function comment(Cafe $cafe)
+    {
+        // カフェのレビューをページネーション
+        $reviews = $cafe->reviews()->paginate(10);// 1ページあたり10件ずつ表示
+    
+        // カフェに関連付けられたコメントを取得
+        $comments = Comment::whereIn('review_id', $reviews->pluck('id'))->get();
+    
+        return view('cafes.cafe', compact('cafe', 'reviews', 'comments'));
     }
 }
