@@ -37,7 +37,7 @@ class Review extends Model
     //「1対多」の関係なので複数系に
     public function comments()
     {
-        return $this->hasMany(Comment::class);
+        return $this->hasMany(Comment::class, 'review_id', 'id');
     }
     
     

@@ -16,12 +16,20 @@ class CommentSeeder extends Seeder
      */
     public function run()
     {
-         DB::table('comments')->insert([
+        DB::table('comments')->insert([
             'comment' => 'よいね！！',
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
             'user_id' => 1,
             'review_id' => 1,
+        ]);
+        
+        DB::table('comments')->insert([
+            'comment' => '僕もそう思いました！',
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
+            'user_id' => 1,
+            'review_id' => 3,
         ]);
     }
 }

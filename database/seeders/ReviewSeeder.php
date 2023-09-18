@@ -34,5 +34,14 @@ class ReviewSeeder extends Seeder
             'cafe_id' => 1,
             'category_id' => 2,
         ]);
+        
+        DB::table('reviews')->insert([
+            'review' => 'ここのアップルパイしか勝たん！',
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
+            'user_id' => 1,
+            'cafe_id' => 1,
+            'category_id' => 5,
+        ]);
     }
 }

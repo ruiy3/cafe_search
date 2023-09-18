@@ -33,7 +33,7 @@
         }
     </style>
     <div class='create'>
-        <form action="/cafes/{{ $cafe->id }}/review" method="POST">
+        <form action="{{ route('review.store', [ 'cafe' => $cafe->id ]) }}" method="POST">
             @csrf
             <input type="hidden" name="review[user_id]" value="{{ Auth::user()->id }}">
             <input type="hidden" name="review[cafe_id]" value="{{ $cafe->id }}">

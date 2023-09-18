@@ -9,6 +9,12 @@ class Comment extends Model
 {
     use HasFactory;
     
+    protected $fillable = [
+        'comment',
+        'user_id',
+        'review_id',
+    ];
+    
      //「1対多」の関係なので単数系に
     public function user()
     {
