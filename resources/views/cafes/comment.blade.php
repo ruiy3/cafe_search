@@ -4,38 +4,7 @@
             {{ __('<Cafe>') }}
         </h2>
     </x-slot>
-    <style>
-        .show_comments {
-            text-align: center;
-            padding: 20px 0;
-        }
-        .comments {
-            text-align: center;
-            padding: 20px 0;
-        }
-        .reviews {
-            text-align: center;
-            padding: 20px 0;
-        }
-        .footer {
-            text-align: center;
-            padding: 40px 0;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #888;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .button:hover {
-            background-color: #555;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/comment_styles.css') }}">
     <div class="show_comments">
         <div class="reviews">
         <h1>{{ __('<<レビュー>>') }}</h1><br>

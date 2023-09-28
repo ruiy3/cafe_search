@@ -1,0 +1,9 @@
+.cafe {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.paginate {
+    display: flex;
+    justify-content: center;
+}

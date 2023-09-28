@@ -4,30 +4,7 @@
             {{ __('<Category>') }}
         </h2>
     </x-slot>
-    <style>
-        .category {
-            text-align: center;
-            padding: 40px 0;
-        }
-        .footer {
-            text-align: center;
-            padding: 40px 0;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #888;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .button:hover {
-            background-color: #555;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/category_styles.css') }}">
     <div class='category'>
         <h1>
             居心地の良い（Cozy）: 暖かく、落ち着いた雰囲気のカフェ。ソファや暖炉があり、くつろげる空間が特徴です。<br>

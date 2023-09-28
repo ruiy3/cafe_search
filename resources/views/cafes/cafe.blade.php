@@ -4,55 +4,7 @@
             {{ __('<Cafe>') }}{{ $cafe->cafe_name }}
         </h2>
     </x-slot>
-    <style>
-        .cafe {
-            text-align: center;
-            padding: 20px 0;
-        }
-        .cafes {
-            text-align: center;
-            padding: 20px 0;
-        }
-        .footer {
-            text-align: center;
-            padding: 20px 0;
-        }
-        .create {
-            text-align: center;
-            padding: 20px 0;
-        }
-        .reviews {
-            text-align: center;
-            padding: 20px 0;
-        }
-        .atomosphere {
-            text-align: center;
-            padding: 20px 0;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #888;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .button:hover {
-            background-color: #555;
-        }
-        .paginate {
-            display: flex;
-            justify-content: center;
-        }
-        .comment {
-            display: flex;
-            justify-content: center;
-            color: blue;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/cafe_styles.css') }}">
     <div class='cafes'>
         <div class='cafe'>
             <h2 class='cafe_location'>{{ __('＜場所＞') }}{{ $cafe->cafe_location }}</h2>

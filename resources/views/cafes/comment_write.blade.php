@@ -4,30 +4,7 @@
             {{ __('<Cafe>') }}{{ $cafe->cafe_name }}
         </h2>
     </x-slot>
-    <style>
-        .create {
-            text-align: center;
-            padding: 40px 0;
-        }
-        .footer {
-            text-align: center;
-            padding: 50px 0;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #888;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .button:hover {
-            background-color: #555;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/comment_write_styles.css') }}">
     <div class='create'>
         <form action="{{ route('comment.store', [ 'cafe' => $cafe->id, 'review' => $review->id ]) }}" method="POST">
             @csrf
