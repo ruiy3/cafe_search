@@ -20,6 +20,14 @@ Route::get('/', [CafeController::class, 'show']);
 
 Route::get('/cafes', [CafeController::class, 'index'])->name('index'); 
 
+Route::get('/cafes/search/name', [CafeController::class, 'name_search_show'])->name('cafes.name-search');
+
+Route::get('/cafes/search/kind', [CafeController::class, 'kind_search_show'])->name('cafes.kind-search');
+
+Route::get('/cafes/search/name/results', [CafeController::class, 'name_search'])->name('cafes.name-search-results');
+
+Route::get('/cafes/search/kind/results', [CafeController::class, 'kind_search'])->name('cafes.kind-search-results');
+
 Route::post('/cafes/{cafe}/review', [ReviewController::class, 'store'])->name('review.store');
 
 Route::get('/cafes/{cafe}/review', [ReviewController::class, 'create'])->name('review');

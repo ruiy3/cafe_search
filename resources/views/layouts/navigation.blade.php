@@ -15,6 +15,12 @@
                     <x-nav-link :href="route('index')" :active="request()->routeIs('index')">
                         {{ __('Cafe') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('cafes.name-search')" :active="request()->routeIs('name_search')">
+                        {{ __('Cafe-Name_Search') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('cafes.kind-search')" :active="request()->routeIs('kind_search')">
+                        {{ __('Cafe-Atmosphere_Search') }}
+                    </x-nav-link>
                 </div>
             </div>
 

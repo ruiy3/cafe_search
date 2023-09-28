@@ -4,17 +4,7 @@
             {{ __('Cafe') }}
         </h2>
     </x-slot>
-    <style>
-        .cafe {
-            text-align: center;
-            padding: 20px 0;
-        }
-        .paginate {
-            display: flex;
-            justify-content: center;
-        }
-   
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/index_styles.css') }}">
     <div class='cafes'>
         @foreach ($cafes as $cafe)
             <div class='cafe'>
