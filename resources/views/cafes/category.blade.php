@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('<Category>') }}
+            {{ __('<雰囲気>') }}
         </h2>
     </x-slot>
     <link rel="stylesheet" href="{{ asset('css/category_styles.css') }}">

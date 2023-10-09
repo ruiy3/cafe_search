@@ -14,14 +14,24 @@
     text-align: center;
     padding: 20px 0;
 }
-.reviews {
-    text-align: center;
-    padding: 20px 0;
-}
 .atomosphere {
-    text-align: center;
-    padding: 20px 0;
-    }
+  text-align: center;
+  padding: 20px 0;
+}
+.atomosphere a.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #888; /* ボタンの背景色 */
+  color: white; /* ボタンのテキスト色 */
+  border: none;
+  border-radius: 5px; /* ボタンの角を丸くする */
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.atomosphere a.button:hover {
+  background-color: #555; /* ホバー時の背景色 */
+}
 .button {
     display: inline-block;
     padding: 10px 20px;
@@ -44,4 +54,43 @@
     display: flex;
     justify-content: center;
     color: blue;
+}
+.cafe_explain {
+    font-size: 1.5rem; /* フォントサイズを大きくする */
+    font-weight: bold; /* 太字にする */
+    color: #000000; /* テキストの色を黒にする */
+    text-align: center; /* テキストを中央揃えにする */
+    margin-top: 20px; /* 上部のマージンを追加してスペースを確保 */
+}
+.cafe_explain::before,
+.cafe_explain::after {
+    content: "～～"; /* 装飾用の文字や記号を追加 */
+    color: #708090;
+    margin: 0 10px; /* 装飾の間隔を調整 */
+    font-size: 1.5rem; /* 装飾のフォントサイズを大きくする */
+}
+.reviews {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    margin: 10px;
+    text-align: center;
+}
+.custom-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* スマートフォン用の1列 */
+    gap: 1rem; /* 列間の間隔 */
+}
+.fancy-text {
+    font-family: 'YourFont', sans-serif; /* フォントファミリーを指定 */
+    font-size: 30px; /* フォントサイズを調整 */
+    color: #00000; /* テキストの色を指定 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* テキストに影を追加 */
+    padding: 5px; /* パディングを追加してテキストの周りにスペースを作成 */
+    background-color: #D3D3D3; /* 背景色を指定 */
+    border-radius: 10px; /* 角丸の半径を設定 */
+    text-align: center; /* テキストを中央に配置 */
 }

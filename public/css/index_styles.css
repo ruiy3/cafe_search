@@ -1,9 +1,23 @@
-.cafe {
-    text-align: center;
-    padding: 20px 0;
+.cafes {
+  text-align: center;
+  padding: 20px 0;
 }
 
 .paginate {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+}
+.custom-box {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+  margin: 10px;
+}
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* スマートフォン用の1列 */
+  gap: 1rem; /* 列間の間隔 */
 }

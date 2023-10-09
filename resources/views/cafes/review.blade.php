@@ -22,8 +22,9 @@
                         <option value="{{ $category->id }}">{{ $category->kind }}</option>
                     @endforeach
                 </select>
-                <br>
-                <a href="{{ route('cafes.category', [ 'cafe' => $cafe->id ]) }}"><<雰囲気の詳細>></a>
+                <div class='atomosphere'>
+                    <a href="{{ route('cafes.category', [ 'cafe' => $cafe->id ]) }}" class="button">{{ __('雰囲気の詳細') }}</a>
+                </div>
             </div>
             <input type="submit" class="button" value="投稿"/>
         </form>

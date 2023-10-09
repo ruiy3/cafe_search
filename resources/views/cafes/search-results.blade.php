@@ -5,12 +5,12 @@
         </h2>
     </x-slot>
     <link rel="stylesheet" href="{{ asset('css/search_results_styles.css') }}">
-   <div class="cafes">
+   <div class="custom-grid">
         @if(isset($message))
             <p>{{ $message }}</p>
         @else
             @foreach($cafes as $cafe)
-                <div class="cafe">
+                <div class="custom-box">
                     <a href="{{ route('cafes.cafe', [ 'cafe' => $cafe->id ]) }}">
                         <h3>{{ __('＜cafe名＞') }}{{ $cafe->cafe_name }}</h3>
                     </a>
