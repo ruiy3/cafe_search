@@ -3,23 +3,24 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
-                <!-- Logo -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+                <!-- Cafe Logo using FontAwesome -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('index') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                        <i class="fas fa-coffee"></i> <!-- FontAwesomeアイコンを利用！ -->
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('index')" :active="request()->routeIs('index')">
-                        {{ __('Cafe') }}
+                        {{ __('～カフェ～') }}
                     </x-nav-link>
                     <x-nav-link :href="route('cafes.name-search')" :active="request()->routeIs('name_search')">
-                        {{ __('Cafe-Name_Search') }}
+                        {{ __('～カフェ名検索～') }}
                     </x-nav-link>
                     <x-nav-link :href="route('cafes.kind-search')" :active="request()->routeIs('kind_search')">
-                        {{ __('Cafe-Atmosphere_Search') }}
+                        {{ __('～雰囲気検索～') }}
                     </x-nav-link>
                 </div>
             </div>
