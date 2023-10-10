@@ -4,7 +4,28 @@
 }
 .comments {
     text-align: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px 0;
+    margin: 10px;
+}
+.custom-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* スマートフォン用の1列 */
+    gap: 1rem; /* 列間の間隔 */
+}
+.fancy-text {
+    font-family: 'YourFont', sans-serif; /* フォントファミリーを指定 */
+    font-size: 30px; /* フォントサイズを調整 */
+    color: #00000; /* テキストの色を指定 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* テキストに影を追加 */
+    padding: 5px; /* パディングを追加してテキストの周りにスペースを作成 */
+    background-color: #D3D3D3; /* 背景色を指定 */
+    border-radius: 10px; /* 角丸の半径を設定 */
+    text-align: center; /* テキストを中央に配置 */
 }
 .reviews {
     text-align: center;

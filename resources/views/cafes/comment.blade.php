@@ -11,10 +11,12 @@
         <a href="{{ route('comment.write', [ 'cafe' => $cafe->id, 'review' => $review->id ]) }}"><p class='review'>{{ $review->user->name }}{{ __('>>')}}{{ $review->review }}</p></a>
         <p class='category'>{{ __('雰囲気：')}}{{ $review->category->kind }}</p>
         </div>
-        <div class="comments">
-        <h1>{{ __('<<コメント>>') }}</h1><br>
+        <h1 class="fancy-text">{{ __('<<コメント>>') }}</h1><br>
+        <div class="custom-grid">
         @foreach ($comments as $comment)
+            <div class="comments">
             <p class='comment'>{{ $review->user->name }}{{ __('>>')}}{{ $comment->comment }}</p>
+            </div>
         @endforeach
         </div>
     </div>
