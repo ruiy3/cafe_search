@@ -13,8 +13,8 @@
         <div class='atomosphere'>
             <br><a href="{{ route('cafes.category', [ 'cafe' => $cafe->id ]) }}" class="button">{{ __('雰囲気の詳細') }}</a>
         </div>
-    <h1 class="fancy-text">{{ __('<<レビュー>>') }}</h1>
     </div>
+    <h1 class="fancy-text">{{ __('<<レビュー>>') }}</h1>
     <div class="custom-grid">
         @foreach ($reviews as $review)
             <div class="reviews">
